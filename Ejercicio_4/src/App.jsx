@@ -46,48 +46,56 @@ const App = () => {
         <h3 className="text-lg font-semibold mb-2">Parte 1: Optimización con React.memo</h3>
         <ul className="list-disc pl-5 text-gray-700">
           <li>
-            <strong className={`${theme === 'Oscuro' ? 'text-white' : 'text-gray-800'}`}>¿Cómo cambia el comportamiento del componente cuando se usa React.memo?</strong>
-            <p className={`${theme === 'Oscuro' ? 'text-white' : 'text-gray-800'}`}>React.memo evita la re-renderización del componente si las props no cambian, mejorando así el rendimiento.</p>
+            <strong>¿Cómo cambia el comportamiento del componente cuando se usa React.memo?</strong>
+            <p>React.memo evita la re-renderización del componente si las props no cambian, mejorando así el rendimiento.</p>
+            <p><strong>Componente que ejecuta:</strong> <code>Counter</code></p>
           </li>
           <li>
-            <strong className={`${theme === 'Oscuro' ? 'text-white' : 'text-gray-800'}`}>¿Qué situaciones pueden causar que el componente se vuelva a renderizar?</strong>
-            <p className={`${theme === 'Oscuro' ? 'text-white' : 'text-gray-800'}`}>El componente se volverá a renderizar si las props cambian (es decir, la lista de elementos en este caso).</p>
+            <strong>¿Qué situaciones pueden causar que el componente se vuelva a renderizar?</strong>
+            <p>El componente se volverá a renderizar si las props cambian (es decir, el valor de <code>count</code> en este caso).</p>
+            <p><strong>Componente que ejecuta:</strong> <code>Counter</code></p>
           </li>
         </ul>
 
         <h3 className="text-lg font-semibold mt-5 mb-2">Parte 2: Uso de useMemo para Cálculos Costosos</h3>
         <ul className="list-disc pl-5 text-gray-700">
           <li>
-            <strong className={`${theme === 'Oscuro' ? 'text-white' : 'text-gray-800'}`}>¿Cuándo debería usarse useMemo?</strong>
-            <p className={`${theme === 'Oscuro' ? 'text-white' : 'text-gray-800'}`}>useMemo debería usarse para memorizar el resultado de cálculos costosos que dependen de ciertas props o estados, evitando que se recalculen innecesariamente en cada renderizado.</p>
+            <strong>¿Cuándo debería usarse useMemo?</strong>
+            <p>useMemo debería usarse para memorizar el resultado de cálculos costosos que dependen de ciertas props o estados, evitando que se recalculen innecesariamente en cada renderizado.</p>
+            <p><strong>Componente que ejecuta:</strong> <code>List</code></p>
           </li>
           <li>
-            <strong className={`${theme === 'Oscuro' ? 'text-white' : 'text-gray-800'}`}>¿Qué sucede si no se usa useMemo en un cálculo costoso?</strong>
-            <p className={`${theme === 'Oscuro' ? 'text-white' : 'text-gray-800'}`}>Si no se usa useMemo, la función se ejecutará en cada renderizado, lo que puede afectar el rendimiento si el cálculo es intensivo.</p>
+            <strong>¿Qué sucede si no se usa useMemo en un cálculo costoso?</strong>
+            <p>Si no se usa useMemo, la función se ejecutará en cada renderizado, lo que puede afectar el rendimiento si el cálculo es intensivo.</p>
+            <p><strong>Componente que ejecuta:</strong> <code>List</code></p>
           </li>
         </ul>
 
         <h3 className="text-lg font-semibold mt-5 mb-2">Parte 3: Uso de useCallback para Funciones Memorables</h3>
         <ul className="list-disc pl-5 text-gray-700">
           <li>
-            <strong className={`${theme === 'Oscuro' ? 'text-white' : 'text-gray-800'}`}>¿En qué escenarios es útil useCallback?</strong>
-            <p className={`${theme === 'Oscuro' ? 'text-white' : 'text-gray-800'}`}>useCallback es útil para memorizar funciones que se pasan como props a componentes hijos, evitando que se vuelvan a crear en cada renderizado y, por lo tanto, evitando renderizaciones innecesarias de esos componentes hijos.</p>
+            <strong>¿En qué escenarios es útil useCallback?</strong>
+            <p>useCallback es útil para memorizar funciones que se pasan como props a componentes hijos, evitando que se vuelvan a crear en cada renderizado y, por lo tanto, evitando renderizaciones innecesarias de esos componentes hijos.</p>
+            <p><strong>Componente que ejecuta:</strong> <code>Button</code>, <code>List</code></p>
           </li>
           <li>
-            <strong className={`${theme === 'Oscuro' ? 'text-white' : 'text-gray-800'}`}>¿Cómo se determina cuándo una función debe memorizarse?</strong>
-            <p className={`${theme === 'Oscuro' ? 'text-white' : 'text-gray-800'}`}>Una función debe memorizarse si se pasa como prop a un componente que usa React.memo o si es utilizada en un efecto (useEffect) donde sus dependencias pueden cambiar, para evitar la creación de nuevas instancias en cada renderizado.</p>
+            <strong>¿Cómo se determina cuándo una función debe memorizarse?</strong>
+            <p>Una función debe memorizarse si se pasa como prop a un componente que usa React.memo o si es utilizada en un efecto (<code>useEffect</code>) donde sus dependencias pueden cambiar, para evitar la creación de nuevas instancias en cada renderizado.</p>
+            <p><strong>Componente que ejecuta:</strong> <code>Button</code>, <code>List</code></p>
           </li>
         </ul>
 
         <h3 className="text-lg font-semibold mt-5 mb-2">Parte 4: Lazy Loading y Suspense</h3>
         <ul className="list-disc pl-5 text-gray-700">
           <li>
-            <strong className={`${theme === 'Oscuro' ? 'text-white' : 'text-gray-800'}`}>¿Cómo ayuda el Lazy Loading a mejorar el rendimiento de la aplicación?</strong>
-            <p className={`${theme === 'Oscuro' ? 'text-white' : 'text-gray-800'}`}>Lazy Loading permite que solo se carguen componentes cuando son necesarios, lo que reduce el tamaño del paquete inicial y mejora los tiempos de carga de la aplicación.</p>
+            <strong>¿Cómo ayuda el Lazy Loading a mejorar el rendimiento de la aplicación?</strong>
+            <p>Lazy Loading permite que solo se carguen componentes cuando son necesarios, lo que reduce el tamaño del paquete inicial y mejora los tiempos de carga de la aplicación.</p>
+            <p><strong>Componente que ejecuta:</strong> <code>LazyComponent</code></p>
           </li>
           <li>
-            <strong className={`${theme === 'Oscuro' ? 'text-white' : 'text-gray-800'}`}>¿Qué consideraciones debes tener al usar Suspense?</strong>
-            <p className={`${theme === 'Oscuro' ? 'text-white' : 'text-gray-800'}`}>Debes asegurarte de que los componentes hijos sean compatibles con Lazy Loading y que el fallback de Suspense sea adecuado para mejorar la experiencia del usuario mientras se cargan los componentes.</p>
+            <strong>¿Qué consideraciones debes tener al usar Suspense?</strong>
+            <p>Debes asegurarte de que los componentes hijos sean compatibles con Lazy Loading y que el fallback de Suspense sea adecuado para mejorar la experiencia del usuario mientras se cargan los componentes.</p>
+            <p><strong>Componente que ejecuta:</strong> <code>Suspense</code></p>
           </li>
         </ul>
       </div>
